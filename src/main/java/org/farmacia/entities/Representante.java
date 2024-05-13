@@ -1,4 +1,4 @@
-package entities;
+package org.farmacia.entities;
 
 public class Representante {
     public String nome_representante ;

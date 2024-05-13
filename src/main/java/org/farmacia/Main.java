@@ -1,7 +1,7 @@
-package org.example;
+package org.farmacia;
 
 
-import entities.Substancia;
+import org.farmacia.entities.Substancia;
 
 public class Main {
     public static void main(String[] args) {

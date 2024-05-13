@@ -1,4 +1,4 @@
-package entities;
+package org.farmacia.entities;
 
 import java.util.Date;
 
