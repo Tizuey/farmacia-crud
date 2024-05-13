@@ -22,7 +22,7 @@ public class RemedioRepository {
     removerRemedio(String nome, String farmaceutica): void -> Remove remédio x de farmaceutica y do sistema.
     */
 
-    ArrayList<Remedio> remedios;
+    ArrayList<Remedio> remedios = new ArrayList<>();
 
     public void save(Remedio remedio) {
         remedios.add(remedio);
