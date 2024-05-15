@@ -1,7 +1,10 @@
-import java.util.ArrayList;
-import java.util.List;
+package org.farmacia.services;
 
-public class ManipulacaoRepresentante {
+import org.farmacia.entities.Representante;
+
+import java.util.ArrayList;
+
+public class RepresentanteService {
 
 	ArrayList<Representante> representantes = new ArrayList<>();
 
@@ -10,7 +13,7 @@ public class ManipulacaoRepresentante {
         representantes.add(representante);
     }      
 
-    public List<Representante> getRepresentantes() {
+    public ArrayList<Representante> getRepresentantes() {
         return representantes;
     }
 
