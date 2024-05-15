@@ -1,16 +1,17 @@
 package org.farmacia.entities;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 // aqui é a classe de remedio no qual se criara o objeto
 public class Remedio extends Substancia {
     public String nome_remedio;
-    public Date data_vencimento;
+    public LocalDate data_vencimento;
     public int quantidade;
     public float concentracao;
     public Farmaceutica farmaceutica;
     // o seu contrutor que cria o objeto
-    public Remedio(Tipo tipo, String nome, String nome_remedio, Date data_vencimento, int quantidade, float concentracao, Farmaceutica farmaceutica) {
+    public Remedio(Tipo tipo, String nome, String nome_remedio, LocalDate data_vencimento, int quantidade, float concentracao, Farmaceutica farmaceutica) {
         super(tipo, nome);
         this.nome_remedio = nome_remedio;
         this.data_vencimento = data_vencimento;
@@ -27,11 +28,11 @@ public class Remedio extends Substancia {
         this.nome_remedio = nome_remedio;
     }
 
-    public Date getData_vencimento() {
+    public LocalDate getData_vencimento() {
         return data_vencimento;
     }
 
-    public void setData_vencimento(Date data_vencimento) {
+    public void setData_vencimento(LocalDate data_vencimento) {
         this.data_vencimento = data_vencimento;
     }
 

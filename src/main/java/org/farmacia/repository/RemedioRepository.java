@@ -3,17 +3,15 @@ package org.farmacia.repository;
 import org.farmacia.entities.Farmaceutica;
 import org.farmacia.entities.Remedio;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.Objects;
 
 // Repositório de Remédios: Armazena remédios em memória em uma ArrayList
 public class RemedioRepository {
 
-
-
-
     ArrayList<Remedio> remedios = new ArrayList<>();
+
     //save(Remedio):void -> Adiciona remédio ao banco de dados
     public void save(Remedio remedio) {
         remedios.add(remedio);
@@ -31,7 +29,7 @@ public class RemedioRepository {
     }
 
     // encontrarPorValidade(Date validade): ArrayList<Remedio> -> Pesquisa por um nome e retorna remédios com esta validade
-    public ArrayList<Remedio> encontrarPorValidade(Date validade) {
+    public ArrayList<Remedio> encontrarPorValidade(LocalDate validade) {
         ArrayList<Remedio> remediosPesquisados = new ArrayList<>();
         for (Remedio remedio : remedios) {
             if (Objects.equals(remedio.data_vencimento, validade)) {
@@ -57,7 +55,7 @@ public class RemedioRepository {
         return remedios;
     }
 
-    public void atualizarRemedio(String nome, String farmaceutica, String novoNome, Date dataVencimento, int quantidade,
+    public void atualizarRemedio(String nome, String farmaceutica, String novoNome, LocalDate dataVencimento, int quantidade,
                                  float concentracao, Farmaceutica novaFarmaceutica) {
         ArrayList<Remedio> remediosPesquisados = encontrarPorNome(nome);
         for (Remedio remedio : remediosPesquisados) {
