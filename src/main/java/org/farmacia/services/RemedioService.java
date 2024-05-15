@@ -69,7 +69,7 @@ public class RemedioService {
         System.out.print("Digite o nome da farmaceutica: ");
         farmaceuticaNome = sc.nextLine();
         Farmaceutica farm = new Farmaceutica("placeholder", -1, farmaceuticaNome);
-        Remedio remedio = new Remedio(Substancia.Tipo.Outros, "Teste", nome, date, quantidade, concentracao, farm);
+        Remedio remedio = new Remedio(Substancia.Tipo.Outros, sub, nome, date, quantidade, concentracao, farm);
         System.out.println("Remédio cadastrado!");
         remedioRepository.save(remedio);
     }
@@ -184,7 +184,6 @@ public class RemedioService {
                 sc.nextLine();
             }
         }
-        LocalDate date = LocalDate.of(ano, mes, dia);
-        return date;
+        return LocalDate.of(ano, mes, dia);
     }
 }
