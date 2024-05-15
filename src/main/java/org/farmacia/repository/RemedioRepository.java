@@ -12,7 +12,7 @@ public class RemedioRepository {
 
 
 
-    // save(Remedio):void -> Adiciona remédio ao banco de dados
+
     ArrayList<Remedio> remedios = new ArrayList<>();
     //save(Remedio):void -> Adiciona remédio ao banco de dados
     public void save(Remedio remedio) {
