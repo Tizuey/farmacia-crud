@@ -7,27 +7,19 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Objects;
 
+// Repositório de Remédios: Armazena remédios em memória em uma ArrayList
 public class RemedioRepository {
 
-    /*
-    Repositório de Remédios: Armazena remédios em memória em uma ArrayList
-    save(Remedio):void -> Adiciona remédio ao banco de dados,
-    encontrarPorNome(String nome): ArrayList<Remedio> -> Pesquisa por um nome e retorna remédios com este nome,
-    encontrarPorValidade(Date validade): ArrayList<Remedio> -> Pesquisa por um nome e retorna remédios com esta validade,
-    encontrarPorFarmaceutica(String farmaceutica): ArrayList<Remedio> -> Pesquisa por um nome e retorna remédios desta farmaceutica,
-    encontrarTodosRemedios(): ArrayList<Remedio> -> Retorna todos remédios cadastrados,
-    atualizarRemedio(String nome, String farmaceutica, String novoNome, Date dataVencimento, int quantidade,
-                     float concentracao, Farmaceutica novaFarmaceutica): void -> Atualiza remédio x de farmaceutica y
-                     com os dados passados.
-    removerRemedio(String nome, String farmaceutica): void -> Remove remédio x de farmaceutica y do sistema.
-    */
+
+
 
     ArrayList<Remedio> remedios = new ArrayList<>();
-
+    //save(Remedio):void -> Adiciona remédio ao banco de dados
     public void save(Remedio remedio) {
         remedios.add(remedio);
     }
 
+    //encontrarPorNome(String nome): ArrayList<Remedio> -> Pesquisa por um nome e retorna remédios com este nome
     public ArrayList<Remedio> encontrarPorNome(String nome) {
         ArrayList<Remedio> remediosPesquisados = new ArrayList<>();
         for (Remedio remedio : remedios) {
@@ -38,6 +30,7 @@ public class RemedioRepository {
         return remediosPesquisados;
     }
 
+    // encontrarPorValidade(Date validade): ArrayList<Remedio> -> Pesquisa por um nome e retorna remédios com esta validade
     public ArrayList<Remedio> encontrarPorValidade(Date validade) {
         ArrayList<Remedio> remediosPesquisados = new ArrayList<>();
         for (Remedio remedio : remedios) {
@@ -48,6 +41,7 @@ public class RemedioRepository {
         return remediosPesquisados;
     }
 
+    // encontrarTodosRemedios(): ArrayList<Remedio> -> Retorna todos remédios cadastrados,
     public ArrayList<Remedio> encontrarPorFarmaceutica(String farmaceutica) {
         ArrayList<Remedio> remediosPesquisados = new ArrayList<>();
         for (Remedio remedio : remedios) {
@@ -58,6 +52,7 @@ public class RemedioRepository {
         return remediosPesquisados;
     }
 
+    //atualizarRemedio(String nome, String farmaceutica, String novoNome, Date dataVencimento, int quantidade,float concentracao, Farmaceutica novaFarmaceutica): void -> Atualiza remédio x de farmaceutica y com os dados passados.
     public ArrayList<Remedio> encontrarTodosRemedios() {
         return remedios;
     }
@@ -77,7 +72,7 @@ public class RemedioRepository {
             }
         }
     }
-
+    //removerRemedio(String nome, String farmaceutica): void -> Remove remédio x de farmaceutica y do sistema.
     public void removerRemedio(String nome, String farmaceutica) {
         ArrayList<Remedio> remediosPesquisados = encontrarPorNome(nome);
         for (Remedio remedio : remediosPesquisados) {

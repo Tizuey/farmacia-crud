@@ -2,13 +2,14 @@ package org.farmacia.entities;
 
 import java.util.Date;
 
+// aqui é a classe de remedio no qual se criara o objeto
 public class Remedio extends Substancia {
     public String nome_remedio;
     public Date data_vencimento;
     public int quantidade;
     public float concentracao;
     public Farmaceutica farmaceutica;
-
+    // o seu contrutor que cria o objeto
     public Remedio(Tipo tipo, String nome, String nome_remedio, Date data_vencimento, int quantidade, float concentracao, Farmaceutica farmaceutica) {
         super(tipo, nome);
         this.nome_remedio = nome_remedio;
@@ -17,7 +18,7 @@ public class Remedio extends Substancia {
         this.concentracao = concentracao;
         this.farmaceutica = farmaceutica;
     }
-
+    // os get e setter que são utilizados para manipular os atributos do objeto
     public String getNome_remedio() {
         return nome_remedio;
     }
@@ -57,7 +58,7 @@ public class Remedio extends Substancia {
     public void setFarmaceutica(Farmaceutica farmaceutica) {
         this.farmaceutica = farmaceutica;
     }
-
+    // trata a resposta , trazendo  os atributos do objeto
     @Override
     public String toString() {
         return "Remedio{" +
@@ -71,3 +72,4 @@ public class Remedio extends Substancia {
                 '}';
     }
 }
+
