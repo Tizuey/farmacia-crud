@@ -9,11 +9,21 @@ import java.time.LocalDate;
 import java.time.Year;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class RemedioService {
+
+    /*
+    -> Para fazer:
+        - Integrar com substancias
+        - Integrar com farmaceuticas
+        - Update
+        - Delete
+        - Documentar
+        - "Front-End" (estetica, portugues)
+     */
+
 
     RemedioRepository remedioRepository = new RemedioRepository();
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
